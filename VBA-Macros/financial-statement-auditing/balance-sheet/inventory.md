@@ -619,6 +619,112 @@ End Sub
 
 ---
 
+## Output Examples
+
+### Generated `Inventory_Audit` Worksheet
+
+**TEST 1: GL TO PERPETUAL RECONCILIATION**
+```
+┌─────────────────────────────────────────────────────────────────────────────────────┐
+│ INVENTORY - AUDIT WORKPAPER                                                         │
+│ Period: 12/31/2024                                                                  │
+│ Materiality: $50,000                                                                │
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ TEST 1: GL TO PERPETUAL RECONCILIATION                                              │
+├────────────────────────────────┬────────────────┬────────────────┬──────────────────┤
+│ Description                    │ Amount         │ Reference      │ Status           │
+├────────────────────────────────┼────────────────┼────────────────┼──────────────────┤
+│ GL Balance - Account 1400      │ $2,456,780     │ TB             │                  │
+│ Perpetual Inventory Listing    │ $2,456,780     │ System Report  │                  │
+│ Difference                     │ $0.00          │                │ ✓ RECONCILED     │
+└────────────────────────────────┴────────────────┴────────────────┴──────────────────┘
+```
+
+**TEST 2: TEST COUNT RESULTS**
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 2: PHYSICAL COUNT TESTING                                                                       │
+│ Sample Size: 25 items  |  Coverage: $875,420 (35.6% of total)                                        │
+├───────────┬────────────────────────┬────────────┬────────────┬────────────┬───────────┬──────────────┤
+│ Item #    │ Description            │ Book Qty   │ Count Qty  │ Difference │ Ext. Diff │ Status       │
+├───────────┼────────────────────────┼────────────┼────────────┼────────────┼───────────┼──────────────┤
+│ INV-1001  │ Widget Type A          │ 1,250      │ 1,250      │ 0          │ $0        │ ✓ AGREES     │
+│ INV-1002  │ Component B-12         │ 3,400      │ 3,398      │ (2)        │ ($45)     │ ⚠ MINOR      │
+│ INV-1003  │ Raw Material X         │ 850        │ 850        │ 0          │ $0        │ ✓ AGREES     │
+│ INV-1004  │ Finished Good Z        │ 425        │ 419        │ (6)        │ ($1,254)  │ ✗ EXCEPTION  │
+│ INV-1005  │ Assembly Part M        │ 2,100      │ 2,100      │ 0          │ $0        │ ✓ AGREES     │
+│ ...       │ (20 more items)        │ ...        │ ...        │ ...        │ ...       │ ...          │
+├───────────┴────────────────────────┴────────────┴────────────┴────────────┴───────────┴──────────────┤
+│ SUMMARY:  Agrees: 22  |  Minor Variance: 2  |  Exceptions: 1  |  Total Variance: ($1,299)            │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**TEST 3: OBSOLESCENCE ANALYSIS**
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 3: OBSOLESCENCE/SLOW-MOVING INVENTORY ANALYSIS                                                  │
+├───────────┬────────────────────────┬────────────┬────────────┬────────────┬──────────────────────────┤
+│ Item #    │ Description            │ On-Hand    │ Ext. Cost  │ Last Sale  │ Status                   │
+├───────────┼────────────────────────┼────────────┼────────────┼────────────┼──────────────────────────┤
+│ INV-0215  │ Discontinued Part A    │ 500        │ $12,500    │ 03/15/2023 │ ✗ NO MOVEMENT >12 MO    │
+│ INV-0318  │ Old Model Widget       │ 125        │ $8,750     │ 06/22/2023 │ ✗ NO MOVEMENT >12 MO    │
+│ INV-0422  │ Slow-Moving Component  │ 850        │ $4,250     │ 09/15/2024 │ ⚠ SLOW MOVING            │
+│ INV-0156  │ Legacy Assembly        │ 200        │ $15,000    │ 01/10/2023 │ ✗ NO MOVEMENT >12 MO    │
+├───────────┴────────────────────────┴────────────┴────────────┴────────────┴──────────────────────────┤
+│ Total No Movement >12 months:    $36,250                                                             │
+│ Slow-Moving (6-12 months):       $4,250                                                              │
+│ Obsolescence Reserve per Books:  $35,000                                                             │
+│ Calculated Reserve Need:         $40,500                                                             │
+│ Difference:                      $5,500       ✗ RESERVE MAY BE INADEQUATE                            │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**TEST 4: NRV TESTING**
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 4: NET REALIZABLE VALUE TESTING (ASC 330)                                                       │
+├───────────┬──────────────────┬──────────┬────────────┬────────────┬────────────┬─────────┬───────────┤
+│ Item #    │ Description      │ Qty      │ Unit Cost  │ Sell Price │ Costs Sell │ NRV     │ Status    │
+├───────────┼──────────────────┼──────────┼────────────┼────────────┼────────────┼─────────┼───────────┤
+│ INV-1004  │ Finished Good Z  │ 419      │ $209.00    │ $250.00    │ $25.00     │ $225.00 │ ✓ OK      │
+│ INV-1012  │ Product Line Y   │ 250      │ $175.00    │ $165.00    │ $15.00     │ $150.00 │ ✗ WRITE   │
+│ INV-1018  │ Damaged Goods    │ 45       │ $89.00     │ $50.00     │ $10.00     │ $40.00  │ ✗ WRITE   │
+├───────────┴──────────────────┴──────────┴────────────┴────────────┴────────────┴─────────┴───────────┤
+│ TOTAL WRITE-DOWN REQUIRED:   $8,455                                                                  │
+│   • INV-1012: 250 × ($175 - $150) = $6,250                                                           │
+│   • INV-1018: 45 × ($89 - $40) = $2,205                                                              │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**AUDIT SUMMARY**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ AUDIT SUMMARY                                                   │
+├─────────────────────────────────────────────────────────────────┤
+│ Total Inventory per GL:                  $2,456,780             │
+│ Less: Obsolescence Reserve:              ($35,000)              │
+│ Net Inventory:                           $2,421,780             │
+│                                                                 │
+│ Procedures Performed:                                           │
+│   ✓ GL to perpetual reconciliation                              │
+│   ✓ Physical count testing (25 items)                           │
+│   ✓ Obsolescence/slow-moving analysis                           │
+│   ✓ NRV testing per ASC 330                                     │
+│   ☐ Cost testing/standard cost variance (manual)                │
+│   ☐ Inventory in transit review (manual)                        │
+│                                                                 │
+│ Proposed Adjustments:                                           │
+│   • Increase obsolescence reserve: $5,500                       │
+│   • NRV write-down: $8,455                                      │
+│   • Total: $13,955                                              │
+│                                                                 │
+│ CONCLUSION:                                                     │
+│ [Document conclusion]                                           │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## Assertions Tested
 
 | Assertion | Test | Pass Criteria |

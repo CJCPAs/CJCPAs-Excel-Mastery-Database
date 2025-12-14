@@ -628,6 +628,89 @@ End Sub
 
 ---
 
+## Output Examples
+
+### Generated `AP_Audit` Worksheet
+
+**TEST 1: GL TO SUB-LEDGER RECONCILIATION**
+```
+┌─────────────────────────────────────────────────────────────────────────────────────┐
+│ ACCOUNTS PAYABLE - AUDIT WORKPAPER                                                  │
+│ Period: 12/31/2024                                                                  │
+│ Materiality: $50,000                                                                │
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ TEST 1: GL TO SUB-LEDGER RECONCILIATION                                             │
+├────────────────────────────────┬────────────────┬────────────────┬──────────────────┤
+│ Description                    │ Amount         │ Reference      │ Status           │
+├────────────────────────────────┼────────────────┼────────────────┼──────────────────┤
+│ GL Balance - Account 2100      │ $687,450       │ TB             │                  │
+│ AP Aging Sub-Ledger Total      │ $687,450       │ Aging Report   │                  │
+│ Difference                     │ $0.00          │                │ ✓ RECONCILED     │
+└────────────────────────────────┴────────────────┴────────────────┴──────────────────┘
+```
+
+**TEST 2: SEARCH FOR UNRECORDED LIABILITIES**
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 2: SEARCH FOR UNRECORDED LIABILITIES                                                            │
+│ Testing subsequent disbursements from 01/01/2025 to 01/31/2025                                       │
+├────────────┬───────────┬─────────────────────────┬────────────┬────────────┬────────────┬────────────┤
+│ Check Date │ Check #   │ Vendor                  │ Amount     │ Inv Date   │ Goods Rec  │ Status     │
+├────────────┼───────────┼─────────────────────────┼────────────┼────────────┼────────────┼────────────┤
+│ 01/05/2025 │ 8901      │ ABC Supplies Inc        │ $12,500    │ 12/28/2024 │ 12/30/2024 │ ✓ Recorded │
+│ 01/08/2025 │ 8905      │ Johnson Manufacturing   │ $45,000    │ 12/15/2024 │ 12/18/2024 │ ✓ Recorded │
+│ 01/12/2025 │ 8912      │ Smith Electric Co       │ $8,750     │ 12/29/2024 │ 12/31/2024 │ ✓ Recorded │
+│ 01/15/2025 │ 8920      │ Premier Logistics       │ $22,300    │ 12/31/2024 │ 01/02/2025 │ ✗ UNRECORD │
+│ 01/18/2025 │ 8925      │ XYZ Services            │ $15,600    │ 01/05/2025 │ 01/08/2025 │ ✓ 2025 OK  │
+│ 01/22/2025 │ 8931      │ Global Parts Inc        │ $35,000    │ 12/28/2024 │ 12/30/2024 │ ✗ UNRECORD │
+├────────────┴───────────┴─────────────────────────┴────────────┴────────────┴────────────┴────────────┤
+│ POTENTIAL UNRECORDED LIABILITIES:    $57,300    (2 items)                                            │
+│ Proposed Adjustment: DR Expense / CR Accounts Payable                                                │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**TEST 3: VENDOR CONCENTRATION ANALYSIS**
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 3: VENDOR CONCENTRATION                                                                         │
+├────────────┬─────────────────────────────┬────────────────┬────────────┬─────────────────────────────┤
+│ Vendor ID  │ Vendor Name                 │ Balance        │ % of Total │ Flag                        │
+├────────────┼─────────────────────────────┼────────────────┼────────────┼─────────────────────────────┤
+│ VEND-001   │ Major Supplier Corp         │ $215,000       │ 31.3%      │ ✗ HIGH CONCENTRATION        │
+│ VEND-002   │ ABC Manufacturing           │ $125,400       │ 18.2%      │ ⚠ Monitor                   │
+│ VEND-003   │ Smith Industries            │ $89,500        │ 13.0%      │ ⚠ Monitor                   │
+│ VEND-004   │ Johnson Supply              │ $67,200        │ 9.8%       │ ✓ Normal                    │
+│ VEND-005   │ Premier Parts               │ $45,350        │ 6.6%       │ ✓ Normal                    │
+│ (Other)    │ Various (42 vendors)        │ $145,000       │ 21.1%      │ ✓ Normal                    │
+├────────────┴─────────────────────────────┼────────────────┼────────────┼─────────────────────────────┤
+│ TOTAL                                    │ $687,450       │ 100.0%     │ Top 3 = 62.5%               │
+└──────────────────────────────────────────┴────────────────┴────────────┴─────────────────────────────┘
+```
+
+**AUDIT SUMMARY**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ AUDIT SUMMARY                                                   │
+├─────────────────────────────────────────────────────────────────┤
+│ Total Accounts Payable:                  $687,450               │
+│                                                                 │
+│ Procedures Performed:                                           │
+│   ✓ GL to sub-ledger reconciliation                             │
+│   ✓ Search for unrecorded liabilities                           │
+│   ✓ Vendor concentration analysis                               │
+│   ☐ Vendor confirmations (manual)                               │
+│   ☐ Purchase cutoff testing (manual)                            │
+│                                                                 │
+│ Proposed Adjustments:                                           │
+│   • Record unrecorded liabilities: $57,300                      │
+│                                                                 │
+│ CONCLUSION:                                                     │
+│ [Document conclusion]                                           │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## Assertions Tested
 
 | Assertion | Test | Pass Criteria |

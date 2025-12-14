@@ -472,6 +472,164 @@ End Sub
 
 ---
 
+## Output Examples
+
+### Tax_Audit Worksheet
+
+The `AuditIncomeTax` procedure generates a comprehensive worksheet:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────┐
+│ INCOME TAX EXPENSE - AUDIT WORKPAPER                                                │
+│ Period: December 31, 2024                                                           │
+│ Prepared: AUDITOR on 12/15/2024 5:30:00 PM                                         │
+│ Reference: ASC 740 - Income Taxes                                                   │
+└─────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**TEST 1: TAX PROVISION SUMMARY**
+```
+┌─────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 1: TAX PROVISION SUMMARY                                                       │
+├────────────────────────────────────────┬────────────┬────────────┬────────┬─────────┤
+│ Component                              │ Per GL     │ Per Schedule│ Diff   │ Status  │
+├────────────────────────────────────────┼────────────┼────────────┼────────┼─────────┤
+│ Current Tax Expense                    │ $525,000   │ $525,000   │ $0     │ ✓       │
+│ Deferred Tax Expense/(Benefit)         │ $75,000    │ $75,000    │ $0     │ ✓       │
+├────────────────────────────────────────┼────────────┼────────────┼────────┼─────────┤
+│ TOTAL TAX EXPENSE                      │ $600,000   │ $600,000   │ $0     │         │
+└────────────────────────────────────────┴────────────┴────────────┴────────┴─────────┘
+```
+
+**TEST 2: EFFECTIVE TAX RATE ANALYSIS**
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ TEST 2: EFFECTIVE TAX RATE ANALYSIS                                         │
+├─────────────────────────────────────────┬───────────────────────────────────┤
+│ Pre-tax Income (Book)                   │ $2,600,000                        │
+│ Total Tax Expense                       │ $600,000                          │
+│ Effective Tax Rate                      │ 23.1%                             │
+│ Statutory Rate (Federal)                │ 21.0%                             │
+└─────────────────────────────────────────┴───────────────────────────────────┘
+
+RATE RECONCILIATION
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Item                                    │ Rate Impact                       │
+├─────────────────────────────────────────┼───────────────────────────────────┤
+│ Federal statutory rate                  │ 21.0%                             │
+│ State taxes, net of federal             │ 3.9%                          ▓▓▓ │
+│ Permanent differences                   │ (0.8%)                        ▓▓▓ │
+│ Tax credits                             │ (1.2%)                        ▓▓▓ │
+│ Change in valuation allowance           │ 0.0%                          ▓▓▓ │
+│ Prior year adjustments                  │ 0.2%                          ▓▓▓ │
+│ Other                                   │ 0.0%                          ▓▓▓ │
+├─────────────────────────────────────────┼───────────────────────────────────┤
+│ Effective Rate                          │ 23.1%                             │
+└─────────────────────────────────────────┴───────────────────────────────────┘
+  (▓▓▓ = Yellow highlight for input cells)
+```
+
+**TEST 3: DEFERRED TAX ANALYSIS**
+```
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 3: DEFERRED TAX ANALYSIS                                                                                             │
+├────────────────────────────┬───────────┬────────────────┬────────────────┬────────────────┬─────────┬─────────────────────┤
+│ Description                │ Type      │ Book Basis     │ Tax Basis      │ Difference     │ DTA/DTL │ Deferred Tax        │
+├────────────────────────────┼───────────┼────────────────┼────────────────┼────────────────┼─────────┼─────────────────────┤
+│ Depreciation               │ Temporary │ $2,500,000     │ $1,800,000     │ $700,000       │ DTL     │ $175,000            │
+│ Allowance for Doubtful Acct│ Temporary │ $150,000       │ $0             │ $150,000       │ DTA     │ ($37,500)           │
+│ Inventory Reserve          │ Temporary │ $85,000        │ $0             │ $85,000        │ DTA     │ ($21,250)           │
+│ Warranty Accrual           │ Temporary │ $200,000       │ $0             │ $200,000       │ DTA     │ ($50,000)           │
+│ Accrued Compensation       │ Temporary │ $125,000       │ $0             │ $125,000       │ DTA     │ ($31,250)           │
+│ Stock Compensation         │ Temporary │ $180,000       │ $60,000        │ $120,000       │ DTA     │ ($30,000)           │
+│ NOL Carryforward           │ Temporary │ $0             │ $200,000       │ ($200,000)     │ DTA     │ ($50,000)           │
+├────────────────────────────┴───────────┴────────────────┴────────────────┴────────────────┼─────────┼─────────────────────┤
+│                                                                                           │         │                     │
+│ Total Deferred Tax Assets:                                                                │         │ $220,000            │
+│ Total Deferred Tax Liabilities:                                                           │         │ $175,000            │
+│ Net Deferred Tax:                                                                         │         │ $45,000 (DTA)       │
+└───────────────────────────────────────────────────────────────────────────────────────────┴─────────┴─────────────────────┘
+```
+
+**TEST 4: DEFERRED TAX ROLLFORWARD**
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ TEST 4: DEFERRED TAX ROLLFORWARD                                            │
+├─────────────────────────────────────────┬───────────────────────────────────┤
+│ Beginning Net Deferred Tax              │ $120,000 (DTA)              ▓▓▓   │
+│ Deferred Tax Expense/(Benefit)          │ ($75,000)                         │
+│ OCI Items                               │ $0                          ▓▓▓   │
+│ Other Adjustments                       │ $0                          ▓▓▓   │
+├─────────────────────────────────────────┼───────────────────────────────────┤
+│ Calculated Ending                       │ $45,000 (DTA)                     │
+│ Per Balance Sheet                       │ $45,000 (DTA)               ▓▓▓   │
+│ Difference                              │ $0                                │
+└─────────────────────────────────────────┴───────────────────────────────────┘
+  (▓▓▓ = Yellow highlight for input cells)
+```
+
+**AUDIT SUMMARY**
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ AUDIT SUMMARY                                                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ Current Tax Expense:                  $525,000                              │
+│ Deferred Tax Expense/(Benefit):       $75,000                               │
+│ TOTAL TAX EXPENSE:                    $600,000                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ Procedures Performed:                                                       │
+│   ✓ Tax provision summary                                                   │
+│   ☐ Effective tax rate analysis (manual)                                    │
+│   ☐ Deferred tax analysis (manual)                                          │
+│   ☐ Deferred tax rollforward (manual)                                       │
+│   ☐ Valuation allowance assessment (manual)                                 │
+│   ☐ Uncertain tax positions (ASC 740-10) (manual)                           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ CONCLUSION: [Document conclusion]                                           │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### VA_Assessment Worksheet
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────┐
+│ VALUATION ALLOWANCE ASSESSMENT                                                      │
+│ Per ASC 740-10-30-16 through 30-25                                                  │
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ POSITIVE EVIDENCE (More Likely Than Not to Realize)                    [GREEN]      │
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ Evidence                                                        │ Present? │ Weight │
+├─────────────────────────────────────────────────────────────────┼──────────┼────────┤
+│ Existing contracts/backlog generating future taxable income     │ [Y/N]▓▓▓ │[H/M/L]▓│
+│ History of profitable operations                                │ [Y/N]▓▓▓ │[H/M/L]▓│
+│ Excess asset value over tax basis (built-in gains)              │ [Y/N]▓▓▓ │[H/M/L]▓│
+│ Carryback availability                                          │ [Y/N]▓▓▓ │[H/M/L]▓│
+│ Tax planning strategies that would be implemented               │ [Y/N]▓▓▓ │[H/M/L]▓│
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ NEGATIVE EVIDENCE (Less Likely to Realize)                         [RED]            │
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ Evidence                                                        │ Present? │ Weight │
+├─────────────────────────────────────────────────────────────────┼──────────┼────────┤
+│ Cumulative losses in recent years                               │ [Y/N]▓▓▓ │[H/M/L]▓│
+│ History of NOL/credit carryforwards expiring unused             │ [Y/N]▓▓▓ │[H/M/L]▓│
+│ Losses expected in early future years                           │ [Y/N]▓▓▓ │[H/M/L]▓│
+│ Unsettled circumstances that could adversely affect operations  │ [Y/N]▓▓▓ │[H/M/L]▓│
+│ Brief carryforward period                                       │ [Y/N]▓▓▓ │[H/M/L]▓│
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ CONCLUSION                                                                          │
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ Gross Deferred Tax Assets:                    $220,000                          ▓▓▓ │
+│ Valuation Allowance Required:                 $0                                ▓▓▓ │
+│ Net Deferred Tax Asset:                       $220,000                              │
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ Management's Assessment:                                                            │
+│ [Document management's position]                                                    │
+└─────────────────────────────────────────────────────────────────────────────────────┘
+  (▓▓▓ = Yellow highlight for input cells)
+```
+
+---
+
 ## Valuation Allowance Assessment
 
 ```vba
