@@ -67,6 +67,25 @@
 
 ---
 
+## VBA Macros for Public Accounting
+
+> **There's a VBA for That!** Ready-to-copy-paste VBA code for accountants, auditors, and finance professionals.
+
+| Category | What's Inside |
+|----------|---------------|
+| [**Data Import & Cleanup**](./VBA-Macros/data-import-cleanup/) | Import CSV files, remove duplicates, clean data, parse text |
+| [**Journal Entries**](./VBA-Macros/journal-entries/) | Create JE templates, validate debits/credits, post to GL |
+| [**Reconciliations**](./VBA-Macros/reconciliations/) | Bank recons, account matching, variance analysis, tick marks |
+| [**Financial Statements**](./VBA-Macros/financial-statements/) | Generate BS/IS, comparative statements, financial ratios |
+| [**Workpapers**](./VBA-Macros/workpapers/) | Create PBC lists, index workpapers, add tickmarks, sign-offs |
+| [**Reporting**](./VBA-Macros/reporting/) | Export to PDF, email reports, create dashboards |
+| [**Audit Procedures**](./VBA-Macros/audit-procedures/) | Random sampling, MUS, confirmations, cutoff testing |
+| [**Formatting & Utilities**](./VBA-Macros/formatting-utilities/) | Format cells, protect sheets, navigation helpers |
+
+**[View All VBA Macros](./VBA-Macros/)** — 100+ ready-to-use macros with copy-paste code
+
+---
+
 ## Help & Reference
 
 | Resource | Description |
