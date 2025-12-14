@@ -19,17 +19,17 @@
 |----------|:---------:|-----------|
 | [**Math & Trig**](./functions/math-trig/) | 80+ | [SUM](./functions/math-trig/SUM.md) &bull; [SUMIF](./functions/math-trig/SUMIF.md) &bull; [SUMIFS](./functions/math-trig/SUMIFS.md) &bull; [AVERAGE](./functions/math-trig/AVERAGE.md) &bull; [ROUND](./functions/math-trig/ROUND.md) |
 | [**Lookup & Reference**](./functions/lookup-reference/) | 30+ | [VLOOKUP](./functions/lookup-reference/VLOOKUP.md) &bull; [XLOOKUP](./functions/lookup-reference/XLOOKUP.md) &bull; [INDEX](./functions/lookup-reference/INDEX.md) &bull; [MATCH](./functions/lookup-reference/MATCH.md) &bull; [FILTER](./functions/lookup-reference/FILTER.md) |
-| [**Logical**](./functions/logical/) | 15+ | [IF](./functions/logical/IF.md) &bull; [IFERROR](./functions/logical/IFERROR.md) &bull; IFS &bull; AND &bull; OR &bull; SWITCH |
-| [**Text**](./functions/text/) | 35+ | LEFT &bull; RIGHT &bull; MID &bull; CONCAT &bull; TEXTJOIN &bull; TRIM |
-| [**Date & Time**](./functions/date-time/) | 25+ | TODAY &bull; NOW &bull; DATE &bull; DATEDIF &bull; NETWORKDAYS |
-| [**Statistical**](./functions/statistical/) | 100+ | COUNTIF &bull; COUNTIFS &bull; MEDIAN &bull; PERCENTILE &bull; RANK |
-| [**Financial**](./functions/financial/) | 50+ | PMT &bull; PV &bull; FV &bull; NPV &bull; IRR &bull; RATE |
-| [**Information**](./functions/information/) | 20+ | ISBLANK &bull; ISERROR &bull; ISNUMBER &bull; ISTEXT &bull; TYPE |
-| [**Database**](./functions/database/) | 12 | DSUM &bull; DCOUNT &bull; DAVERAGE &bull; DMAX &bull; DMIN |
-| [**Dynamic Arrays**](./functions/arrays/) | 20+ | FILTER &bull; SORT &bull; UNIQUE &bull; SEQUENCE &bull; LET &bull; LAMBDA |
-| [**Engineering**](./functions/engineering/) | 40+ | CONVERT &bull; BIN2DEC &bull; DEC2BIN &bull; COMPLEX |
-| [**Web**](./functions/web/) | 5 | WEBSERVICE &bull; FILTERXML &bull; ENCODEURL |
-| [**Cube (OLAP)**](./functions/cube/) | 7 | CUBEVALUE &bull; CUBEMEMBER &bull; CUBESET |
+| [**Logical**](./functions/logical/) | 15+ | [IF](./functions/logical/IF.md) &bull; [IFERROR](./functions/logical/IFERROR.md) &bull; [IFS](./functions/logical/) &bull; [AND](./functions/logical/) &bull; [OR](./functions/logical/) &bull; [SWITCH](./functions/logical/) |
+| [**Text**](./functions/text/) | 35+ | [LEFT](./functions/text/) &bull; [RIGHT](./functions/text/) &bull; [MID](./functions/text/) &bull; [CONCAT](./functions/text/) &bull; [TEXTJOIN](./functions/text/) &bull; [TRIM](./functions/text/) |
+| [**Date & Time**](./functions/date-time/) | 25+ | [TODAY](./functions/date-time/) &bull; [NOW](./functions/date-time/) &bull; [DATE](./functions/date-time/) &bull; [DATEDIF](./functions/date-time/) &bull; [NETWORKDAYS](./functions/date-time/) |
+| [**Statistical**](./functions/statistical/) | 100+ | [COUNTIF](./functions/statistical/) &bull; [COUNTIFS](./functions/statistical/) &bull; [MEDIAN](./functions/statistical/) &bull; [PERCENTILE](./functions/statistical/) &bull; [RANK](./functions/statistical/) |
+| [**Financial**](./functions/financial/) | 50+ | [PMT](./functions/financial/) &bull; [PV](./functions/financial/) &bull; [FV](./functions/financial/) &bull; [NPV](./functions/financial/) &bull; [IRR](./functions/financial/) &bull; [RATE](./functions/financial/) |
+| [**Information**](./functions/information/) | 20+ | [ISBLANK](./functions/information/) &bull; [ISERROR](./functions/information/) &bull; [ISNUMBER](./functions/information/) &bull; [ISTEXT](./functions/information/) &bull; [TYPE](./functions/information/) |
+| [**Database**](./functions/database/) | 12 | [DSUM](./functions/database/) &bull; [DCOUNT](./functions/database/) &bull; [DAVERAGE](./functions/database/) &bull; [DMAX](./functions/database/) &bull; [DMIN](./functions/database/) |
+| [**Dynamic Arrays**](./functions/arrays/) | 20+ | [FILTER](./functions/lookup-reference/FILTER.md) &bull; [SORT](./functions/arrays/) &bull; [UNIQUE](./functions/arrays/) &bull; [SEQUENCE](./functions/arrays/) &bull; [LET](./functions/arrays/) &bull; [LAMBDA](./functions/arrays/) |
+| [**Engineering**](./functions/engineering/) | 40+ | [CONVERT](./functions/engineering/) &bull; [BIN2DEC](./functions/engineering/) &bull; [DEC2BIN](./functions/engineering/) &bull; [COMPLEX](./functions/engineering/) |
+| [**Web**](./functions/web/) | 5 | [WEBSERVICE](./functions/web/) &bull; [FILTERXML](./functions/web/) &bull; [ENCODEURL](./functions/web/) |
+| [**Cube (OLAP)**](./functions/cube/) | 7 | [CUBEVALUE](./functions/cube/) &bull; [CUBEMEMBER](./functions/cube/) &bull; [CUBESET](./functions/cube/) |
 
 **[View Complete A-Z Function Index](./13-Quick-Reference/Functions-A-Z.md)** — All 500+ functions in one searchable list
 
@@ -43,14 +43,14 @@
 |----------------|-------------------|
 | [**Data Cleaning**](./solutions/data-cleaning/) | Remove spaces, fix capitalization, split/combine columns, remove duplicates |
 | [**Lookups & Retrieval**](./solutions/lookups/) | Find values, multi-criteria lookups, return all matches, handle errors |
-| [**Conditional Calculations**](./solutions/conditional-calculations/) | SUMIF, COUNTIF, AVERAGEIF, MAXIFS, MINIFS |
+| [**Conditional Calculations**](./solutions/conditional-calculations/) | [SUMIF](./functions/math-trig/SUMIF.md), [COUNTIF](./functions/statistical/), [AVERAGEIF](./functions/statistical/), [MAXIFS](./functions/statistical/), [MINIFS](./functions/statistical/) |
 | [**Date & Time**](./solutions/dates-times/) | Calculate age, business days, month-end dates, add months |
 | [**Text Manipulation**](./solutions/text-manipulation/) | Extract names, parse emails, format phone numbers, count words |
 | [**Financial Analysis**](./solutions/financial/) | Loans, investments, NPV/IRR, depreciation, amortization |
 | [**Data Analysis**](./solutions/data-analysis/) | Statistics, correlation, forecasting, outliers, distributions |
 | [**Reporting**](./solutions/reporting/) | Dashboards, KPIs, dynamic titles, sparklines, variance |
-| [**Error Handling**](./solutions/error-handling/) | IFERROR, IFNA, prevent #DIV/0!, identify error types |
-| [**Advanced Techniques**](./solutions/advanced/) | Dynamic arrays, LAMBDA, array formulas, 3D references |
+| [**Error Handling**](./solutions/error-handling/) | [IFERROR](./functions/logical/IFERROR.md), [IFNA](./functions/logical/), prevent #DIV/0!, identify error types |
+| [**Advanced Techniques**](./solutions/advanced/) | Dynamic arrays, [LAMBDA](./functions/arrays/), array formulas, 3D references |
 
 ---
 
@@ -80,14 +80,14 @@
 ## Learning Paths
 
 ### Beginner
-1. Basic Math: [SUM](./functions/math-trig/SUM.md), AVERAGE, COUNT
-2. Logic: [IF](./functions/logical/IF.md), AND, OR
-3. Text Basics: LEFT, RIGHT, TRIM
+1. Basic Math: [SUM](./functions/math-trig/SUM.md), [AVERAGE](./functions/math-trig/AVERAGE.md), [COUNT](./functions/math-trig/COUNT.md)
+2. Logic: [IF](./functions/logical/IF.md), [AND](./functions/logical/), [OR](./functions/logical/)
+3. Text Basics: [LEFT](./functions/text/), [RIGHT](./functions/text/), [TRIM](./functions/text/)
 4. [Keyboard Shortcuts](./03-Keyboard-Shortcuts/)
 
 ### Intermediate
-1. Lookups: [VLOOKUP](./functions/lookup-reference/VLOOKUP.md), [INDEX/MATCH](./functions/lookup-reference/INDEX.md)
-2. Conditional: [SUMIF](./functions/math-trig/SUMIF.md), COUNTIF
+1. Lookups: [VLOOKUP](./functions/lookup-reference/VLOOKUP.md), [INDEX](./functions/lookup-reference/INDEX.md)/[MATCH](./functions/lookup-reference/MATCH.md)
+2. Conditional: [SUMIF](./functions/math-trig/SUMIF.md), [COUNTIF](./functions/statistical/)
 3. [Date & Time Functions](./functions/date-time/)
 4. [Pivot Tables](./05-Pivot-Tables/)
 
@@ -103,21 +103,21 @@
 
 | Function | What It Does | Example |
 |----------|--------------|---------|
-| **SUM** | Add numbers | `=SUM(A1:A10)` |
-| **IF** | Make decisions | `=IF(A1>10, "High", "Low")` |
-| **VLOOKUP** | Find data in a table | `=VLOOKUP(A1, Table, 2, FALSE)` |
-| **COUNTIF** | Count with conditions | `=COUNTIF(A:A, ">100")` |
-| **TRIM** | Remove extra spaces | `=TRIM(A1)` |
+| [**SUM**](./functions/math-trig/SUM.md) | Add numbers | `=SUM(A1:A10)` |
+| [**IF**](./functions/logical/IF.md) | Make decisions | `=IF(A1>10, "High", "Low")` |
+| [**VLOOKUP**](./functions/lookup-reference/VLOOKUP.md) | Find data in a table | `=VLOOKUP(A1, Table, 2, FALSE)` |
+| [**COUNTIF**](./functions/statistical/) | Count with conditions | `=COUNTIF(A:A, ">100")` |
+| [**TRIM**](./functions/text/) | Remove extra spaces | `=TRIM(A1)` |
 
 ## Excel 365 Game-Changers
 
 | Function | Why It Matters |
 |----------|----------------|
-| **XLOOKUP** | Replaces VLOOKUP — looks any direction, built-in error handling |
-| **FILTER** | Return all matching rows dynamically |
-| **UNIQUE** | Remove duplicates with a formula |
-| **SORT** | Sort data without changing source |
-| **LET** | Name values for cleaner, faster formulas |
+| [**XLOOKUP**](./functions/lookup-reference/XLOOKUP.md) | Replaces VLOOKUP — looks any direction, built-in error handling |
+| [**FILTER**](./functions/lookup-reference/FILTER.md) | Return all matching rows dynamically |
+| [**UNIQUE**](./functions/arrays/) | Remove duplicates with a formula |
+| [**SORT**](./functions/arrays/) | Sort data without changing source |
+| [**LET**](./functions/arrays/) | Name values for cleaner, faster formulas |
 
 ---
 
@@ -125,10 +125,10 @@
 
 | Feature | 2016 | 2019 | 2021 | 365 |
 |---------|:----:|:----:|:----:|:---:|
-| Basic functions (SUM, IF, VLOOKUP) | Yes | Yes | Yes | Yes |
-| IFS, SWITCH, TEXTJOIN | — | Yes | Yes | Yes |
-| XLOOKUP, FILTER, UNIQUE | — | — | Yes | Yes |
-| LAMBDA, LET, dynamic arrays | — | — | Yes | Yes |
+| Basic functions ([SUM](./functions/math-trig/SUM.md), [IF](./functions/logical/IF.md), [VLOOKUP](./functions/lookup-reference/VLOOKUP.md)) | Yes | Yes | Yes | Yes |
+| [IFS](./functions/logical/), [SWITCH](./functions/logical/), [TEXTJOIN](./functions/text/) | — | Yes | Yes | Yes |
+| [XLOOKUP](./functions/lookup-reference/XLOOKUP.md), [FILTER](./functions/lookup-reference/FILTER.md), [UNIQUE](./functions/arrays/) | — | — | Yes | Yes |
+| [LAMBDA](./functions/arrays/), [LET](./functions/arrays/), dynamic arrays | — | — | Yes | Yes |
 
 ---
 
