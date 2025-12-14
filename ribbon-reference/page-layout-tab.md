@@ -2,6 +2,8 @@
 
 > **Control printing, page setup, themes, and object arrangement**
 
+**Ribbon Access:** Press **Alt+P** to activate Page Layout tab
+
 ---
 
 ## Tab Overview
@@ -343,17 +345,78 @@ The Page Layout tab controls how your worksheet looks when printed and on screen
 
 ---
 
+## Complete Alt Shortcuts Reference
+
+### Themes Group (Alt+P)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Themes | Alt+P, T, H |
+| Colors | Alt+P, T, C |
+| Fonts | Alt+P, T, F |
+| Effects | Alt+P, T, E |
+
+### Page Setup Group (Alt+P)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Margins | Alt+P, M |
+| Orientation | Alt+P, O |
+| Size | Alt+P, S, Z |
+| Print Area | Alt+P, R |
+| Set Print Area | Alt+P, R, S |
+| Clear Print Area | Alt+P, R, C |
+| Breaks | Alt+P, B |
+| Insert Page Break | Alt+P, B, I |
+| Remove Page Break | Alt+P, B, R |
+| Reset Page Breaks | Alt+P, B, A |
+| Background | Alt+P, G |
+| Print Titles | Alt+P, I |
+| Page Setup Dialog | Alt+P, S, P |
+
+### Scale to Fit Group (Alt+P)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Width | Alt+P, W |
+| Height | Alt+P, H |
+| Scale | Alt+P, S, C |
+
+### Sheet Options Group (Alt+P)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Gridlines View | Alt+P, V, G |
+| Gridlines Print | Alt+P, V, P |
+| Headings View | Alt+P, V, H |
+| Headings Print | Alt+P, V, A |
+
+### Arrange Group (Alt+P)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Bring Forward | Alt+P, A, F |
+| Bring to Front | Alt+P, A, R |
+| Send Backward | Alt+P, A, B |
+| Send to Back | Alt+P, A, K |
+| Selection Pane | Alt+P, A, P |
+| Align | Alt+P, A, A |
+| Group | Alt+P, G, G |
+| Ungroup | Alt+P, G, U |
+| Rotate | Alt+P, A, O |
+
+---
+
 ## Keyboard Shortcuts Summary
 
-| Action | Shortcut |
-|--------|----------|
-| Page Break Preview | Alt+W, I |
-| Normal View | Alt+W, L |
-| Page Layout View | Alt+W, P |
-| Print | Ctrl+P |
-| Selection Pane | Alt+F10 |
-| Group Objects | Ctrl+G |
-| Ungroup Objects | Ctrl+Shift+G |
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Page Break Preview | Alt+W, I | - |
+| Normal View | Alt+W, L | - |
+| Page Layout View | Alt+W, P | - |
+| Print | - | Ctrl+P |
+| Selection Pane | Alt+P, A, P | Alt+F10 |
+| Group Objects | Alt+P, G, G | Ctrl+G |
+| Ungroup Objects | Alt+P, G, U | Ctrl+Shift+G |
+| Margins | Alt+P, M | - |
+| Orientation | Alt+P, O | - |
+| Print Area | Alt+P, R | - |
+| Page Breaks | Alt+P, B | - |
 
 ---
 

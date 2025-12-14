@@ -2,6 +2,8 @@
 
 > **Function library, defined names, formula auditing, and calculation options**
 
+**Ribbon Access:** Press **Alt+M** to activate Formulas tab
+
 ---
 
 ## Tab Overview
@@ -375,22 +377,73 @@ The Formulas tab provides access to all Excel functions and formula tools:
 
 ---
 
+## Complete Alt Shortcuts Reference
+
+### Function Library Group (Alt+M)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Insert Function | Alt+M, F | Shift+F3 |
+| AutoSum | Alt+M, U, S | Alt+= |
+| AutoSum Average | Alt+M, U, A | - |
+| AutoSum Count | Alt+M, U, C | - |
+| AutoSum Max | Alt+M, U, M | - |
+| AutoSum Min | Alt+M, U, I | - |
+| Recently Used | Alt+M, E | - |
+| Financial Functions | Alt+M, I | - |
+| Logical Functions | Alt+M, L | - |
+| Text Functions | Alt+M, T | - |
+| Date & Time Functions | Alt+M, D | - |
+| Lookup & Reference | Alt+M, O | - |
+| Math & Trig Functions | Alt+M, G | - |
+| More Functions | Alt+M, Q | - |
+
+### Defined Names Group (Alt+M)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Name Manager | Alt+M, M | Ctrl+F3 |
+| Define Name | Alt+M, M, N | - |
+| Use in Formula | Alt+M, U | - |
+| Create from Selection | Alt+M, C | Ctrl+Shift+F3 |
+
+### Formula Auditing Group (Alt+M)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Trace Precedents | Alt+M, P | - |
+| Trace Dependents | Alt+M, D | - |
+| Remove Arrows | Alt+M, A, A | - |
+| Remove Precedent Arrows | Alt+M, A, P | - |
+| Remove Dependent Arrows | Alt+M, A, D | - |
+| Show Formulas | Alt+M, H | Ctrl+` |
+| Error Checking | Alt+M, K | - |
+| Evaluate Formula | Alt+M, V | - |
+| Watch Window | Alt+M, W | - |
+
+### Calculation Group (Alt+M)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Calculation Options | Alt+M, X | - |
+| Calculate Now | Alt+M, X, N | F9 |
+| Calculate Sheet | Alt+M, X, S | Shift+F9 |
+
+---
+
 ## Keyboard Shortcuts Summary
 
-| Action | Shortcut |
-|--------|----------|
-| Insert Function dialog | Shift+F3 |
-| AutoSum | Alt+= |
-| Name Manager | Ctrl+F3 |
-| Create names from selection | Ctrl+Shift+F3 |
-| Paste name in formula | F3 |
-| Show Formulas toggle | Ctrl+` |
-| Calculate all workbooks | F9 |
-| Calculate active sheet | Shift+F9 |
-| Calculate all (forced) | Ctrl+Alt+F9 |
-| Recalculate all (rebuild) | Ctrl+Shift+Alt+F9 |
-| Define Name (quick) | Ctrl+F3, N |
-| Evaluate formula step | Alt+M, V |
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Insert Function dialog | Alt+M, F | Shift+F3 |
+| AutoSum | Alt+M, U, S | Alt+= |
+| Name Manager | Alt+M, M | Ctrl+F3 |
+| Create names from selection | Alt+M, C | Ctrl+Shift+F3 |
+| Paste name in formula | - | F3 |
+| Show Formulas toggle | Alt+M, H | Ctrl+` |
+| Calculate all workbooks | Alt+M, X, N | F9 |
+| Calculate active sheet | Alt+M, X, S | Shift+F9 |
+| Calculate all (forced) | - | Ctrl+Alt+F9 |
+| Recalculate all (rebuild) | - | Ctrl+Shift+Alt+F9 |
+| Trace Precedents | Alt+M, P | - |
+| Trace Dependents | Alt+M, D | - |
+| Evaluate formula | Alt+M, V | - |
 
 ---
 

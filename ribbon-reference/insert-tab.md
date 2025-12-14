@@ -2,6 +2,8 @@
 
 > **Add objects, charts, tables, illustrations, and more to your worksheet**
 
+**Ribbon Access:** Press **Alt+N** to activate Insert tab
+
 ---
 
 ## Tab Overview
@@ -26,9 +28,9 @@ The Insert tab lets you add various objects to your worksheet:
 ## Tables Group
 
 ### PivotTable
-| Item | Description | Shortcut |
-|------|-------------|----------|
-| **PivotTable** | Create interactive summary report | - |
+| Item | Description | Alt Shortcut | Other |
+|------|-------------|--------------|-------|
+| **PivotTable** | Create interactive summary report | Alt+N, V | - |
 
 #### PivotTable Dropdown Options
 | Option | Description |
@@ -39,14 +41,14 @@ The Insert tab lets you add various objects to your worksheet:
 | **From Power BI** | Connect to Power BI dataset |
 
 ### Recommended PivotTables
-| Item | Description | Shortcut |
-|------|-------------|----------|
-| **Recommended PivotTables** | AI-suggested PivotTable layouts | - |
+| Item | Description | Alt Shortcut |
+|------|-------------|--------------|
+| **Recommended PivotTables** | AI-suggested PivotTable layouts | Alt+N, S, R |
 
 ### Table
-| Item | Description | Shortcut |
-|------|-------------|----------|
-| **Table** | Convert range to structured Table | Ctrl+T |
+| Item | Description | Alt Shortcut | Other |
+|------|-------------|--------------|-------|
+| **Table** | Convert range to structured Table | Alt+N, T | Ctrl+T |
 
 #### Table Features Created
 | Feature | Description |
@@ -524,17 +526,97 @@ The Insert tab lets you add various objects to your worksheet:
 
 ---
 
+## Complete Alt Shortcuts Reference
+
+### Tables Group (Alt+N)
+| Action | Alt Shortcut |
+|--------|--------------|
+| PivotTable | Alt+N, V |
+| PivotTable from Table/Range | Alt+N, V, T |
+| Recommended PivotTables | Alt+N, S, R |
+| Table | Alt+N, T |
+
+### Illustrations Group (Alt+N)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Pictures from Device | Alt+N, P, D |
+| Pictures from Stock | Alt+N, P, S |
+| Online Pictures | Alt+N, P, O |
+| Shapes | Alt+N, S, H |
+| Icons | Alt+N, N, S |
+| 3D Models | Alt+N, 3 |
+| SmartArt | Alt+N, M |
+| Screenshot | Alt+N, S, C |
+
+### Charts Group (Alt+N)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Recommended Charts | Alt+N, R |
+| Column/Bar Chart | Alt+N, C |
+| Hierarchy Chart | Alt+N, I, C |
+| Line/Area Chart | Alt+N, N |
+| Statistic Chart | Alt+N, A |
+| Combo Chart | Alt+N, D |
+| Pie/Doughnut Chart | Alt+N, Q |
+| Scatter/Bubble Chart | Alt+N, J |
+| Map Chart | Alt+N, S, M |
+| PivotChart | Alt+N, S, Z, C |
+
+### Sparklines Group (Alt+N)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Line Sparkline | Alt+N, S, L |
+| Column Sparkline | Alt+N, S, K |
+| Win/Loss Sparkline | Alt+N, S, W |
+
+### Filters Group (Alt+N)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Slicer | Alt+N, S, F |
+| Timeline | Alt+N, T, I |
+
+### Links Group (Alt+N)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Hyperlink | Alt+N, I |
+
+### Comments Group (Alt+N)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Comment | Alt+N, L, C |
+| Note | Alt+N, L, N |
+
+### Text Group (Alt+N)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Text Box | Alt+N, X |
+| Header & Footer | Alt+N, H |
+| WordArt | Alt+N, W |
+| Signature Line | Alt+N, G |
+| Object | Alt+N, J |
+
+### Symbols Group (Alt+N)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Equation | Alt+N, E |
+| Symbol | Alt+N, U |
+
+---
+
 ## Keyboard Shortcuts Summary
 
-| Action | Shortcut |
-|--------|----------|
-| Insert Table | Ctrl+T |
-| Insert Hyperlink | Ctrl+K |
-| Insert Note | Shift+F2 |
-| Insert Equation | Alt+= |
-| Insert Function | Shift+F3 |
-| Insert Chart (selected data) | Alt+F1 |
-| Insert Chart Sheet | F11 |
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Insert Table | Alt+N, T | Ctrl+T |
+| Insert Hyperlink | Alt+N, I | Ctrl+K |
+| Insert Note | Alt+N, L, N | Shift+F2 |
+| Insert Equation | Alt+N, E | - |
+| Insert Function | - | Shift+F3 |
+| Insert Chart (embedded) | - | Alt+F1 |
+| Insert Chart Sheet | - | F11 |
+| Insert PivotTable | Alt+N, V | - |
+| Insert Shapes | Alt+N, S, H | - |
+| Insert SmartArt | Alt+N, M | - |
 
 ---
 

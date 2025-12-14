@@ -2,6 +2,8 @@
 
 > **Proofing, comments, protection, and workbook tracking**
 
+**Ribbon Access:** Press **Alt+R** to activate Review tab
+
 ---
 
 ## Tab Overview
@@ -360,19 +362,80 @@ The Review tab handles document review and protection:
 
 ---
 
+## Complete Alt Shortcuts Reference
+
+### Proofing Group (Alt+R)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Spelling | Alt+R, S | F7 |
+| Thesaurus | Alt+R, E | Shift+F7 |
+
+### Accessibility Group (Alt+R)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Check Accessibility | Alt+R, A |
+
+### Insights Group (Alt+R)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Smart Lookup | Alt+R, L |
+
+### Language Group (Alt+R)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Translate | Alt+R, T |
+| Translate Selection | Alt+R, T, S |
+| Language | Alt+R, U |
+
+### Comments Group (Alt+R)
+| Action | Alt Shortcut |
+|--------|--------------|
+| New Comment | Alt+R, C |
+| Delete Comment | Alt+R, D |
+| Previous Comment | Alt+R, V |
+| Next Comment | Alt+R, N |
+| Show Comments | Alt+R, H |
+
+### Notes Group (Alt+R)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| New Note | Alt+R, T, N | Shift+F2 |
+| Edit Note | Alt+R, T, E | - |
+| Delete Note | Alt+R, T, D | - |
+| Show All Notes | Alt+R, T, A | - |
+
+### Protect Group (Alt+R)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Protect Sheet | Alt+R, P, S |
+| Protect Workbook | Alt+R, P, W |
+| Allow Edit Ranges | Alt+R, P, R |
+| Unprotect Sheet | Alt+R, P, S (when protected) |
+
+### Changes Group (Alt+R)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Track Changes | Alt+R, G |
+| Highlight Changes | Alt+R, G, H |
+| Accept/Reject Changes | Alt+R, G, A |
+
+---
+
 ## Keyboard Shortcuts Summary
 
-| Action | Shortcut |
-|--------|----------|
-| Spell check | F7 |
-| Thesaurus | Shift+F7 |
-| New Note | Shift+F2 |
-| Edit comment/note | Shift+F2 |
-| Next comment | - |
-| Previous comment | - |
-| Delete comment | - |
-| Protect sheet | - |
-| Unprotect sheet | - |
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Spell check | Alt+R, S | F7 |
+| Thesaurus | Alt+R, E | Shift+F7 |
+| New Note | Alt+R, T, N | Shift+F2 |
+| New Comment | Alt+R, C | - |
+| Next comment | Alt+R, N | - |
+| Previous comment | Alt+R, V | - |
+| Delete comment | Alt+R, D | - |
+| Protect sheet | Alt+R, P, S | - |
+| Protect workbook | Alt+R, P, W | - |
+| Check Accessibility | Alt+R, A | - |
+| Translate | Alt+R, T | - |
 
 ---
 
