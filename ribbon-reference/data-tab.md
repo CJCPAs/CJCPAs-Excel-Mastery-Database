@@ -2,6 +2,8 @@
 
 > **Import, transform, sort, filter, and analyze data**
 
+**Ribbon Access:** Press **Alt+A** to activate Data tab
+
 ---
 
 ## Tab Overview
@@ -518,22 +520,92 @@ The Data tab handles all data management operations:
 
 ---
 
+## Complete Alt Shortcuts Reference
+
+### Get & Transform Data Group (Alt+A)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Get Data | Alt+A, P, N |
+| From Text/CSV | Alt+A, F, T |
+| From Web | Alt+A, F, W |
+| From Table/Range | Alt+A, F, R |
+| Recent Sources | Alt+A, C, R |
+| Existing Connections | Alt+A, X |
+
+### Queries & Connections Group (Alt+A)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Queries & Connections Pane | Alt+A, O | - |
+| Refresh | Alt+A, R, R | Alt+F5 |
+| Refresh All | Alt+A, R, A | Ctrl+Alt+F5 |
+
+### Sort & Filter Group (Alt+A)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Sort A to Z | Alt+A, S, A | - |
+| Sort Z to A | Alt+A, S, D | - |
+| Sort (Custom) | Alt+A, S, S | - |
+| Filter Toggle | Alt+A, T | Ctrl+Shift+L |
+| Clear Filter | Alt+A, C | - |
+| Reapply Filter | Alt+A, Y | Ctrl+Alt+L |
+| Advanced Filter | Alt+A, Q | - |
+
+### Data Tools Group (Alt+A)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Text to Columns | Alt+A, E | - |
+| Flash Fill | Alt+A, I | Ctrl+E |
+| Remove Duplicates | Alt+A, M | - |
+| Data Validation | Alt+A, V, V | - |
+| Data Validation (Circle Invalid) | Alt+A, V, I | - |
+| Data Validation (Clear Circles) | Alt+A, V, C | - |
+| Consolidate | Alt+A, N | - |
+| What-If Analysis | Alt+A, W | - |
+| Goal Seek | Alt+A, W, G | - |
+| Scenario Manager | Alt+A, W, S | - |
+| Data Table | Alt+A, W, T | - |
+
+### Forecast Group (Alt+A)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Forecast Sheet | Alt+A, D |
+
+### Outline Group (Alt+A)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Group | Alt+A, G, G | Alt+Shift+Right |
+| Ungroup | Alt+A, U, U | Alt+Shift+Left |
+| Subtotal | Alt+A, B | - |
+| Auto Outline | Alt+A, G, A | - |
+| Clear Outline | Alt+A, G, C | - |
+| Show Detail | Alt+A, J | - |
+| Hide Detail | Alt+A, H | - |
+
+### Data Types Group (Alt+A)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Stocks | Alt+A, K |
+| Geography | Alt+A, G, E |
+
+---
+
 ## Keyboard Shortcuts Summary
 
-| Action | Shortcut |
-|--------|----------|
-| Toggle AutoFilter | Ctrl+Shift+L |
-| Reapply filter | Ctrl+Alt+L |
-| Flash Fill | Ctrl+E |
-| Refresh connection | Alt+F5 |
-| Refresh all | Ctrl+Alt+F5 |
-| Group rows/columns | Alt+Shift+Right |
-| Ungroup rows/columns | Alt+Shift+Left |
-| Show outline level 1 | Alt+Shift+1 |
-| Show outline level 2 | Alt+Shift+2 |
-| Show all detail | Alt+Shift+9 |
-| Hide detail | Alt+Shift+- |
-| Show detail | Alt+Shift++ |
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Toggle AutoFilter | Alt+A, T | Ctrl+Shift+L |
+| Reapply filter | Alt+A, Y | Ctrl+Alt+L |
+| Flash Fill | Alt+A, I | Ctrl+E |
+| Refresh connection | Alt+A, R, R | Alt+F5 |
+| Refresh all | Alt+A, R, A | Ctrl+Alt+F5 |
+| Sort A to Z | Alt+A, S, A | - |
+| Sort Z to A | Alt+A, S, D | - |
+| Text to Columns | Alt+A, E | - |
+| Remove Duplicates | Alt+A, M | - |
+| Data Validation | Alt+A, V, V | - |
+| Group rows/columns | Alt+A, G, G | Alt+Shift+Right |
+| Ungroup rows/columns | Alt+A, U, U | Alt+Shift+Left |
+| Subtotal | Alt+A, B | - |
 
 ---
 

@@ -2,6 +2,8 @@
 
 > **Control how you see your workbook: views, zoom, windows, and macros**
 
+**Ribbon Access:** Press **Alt+W** to activate View tab
+
 ---
 
 ## Tab Overview
@@ -325,22 +327,73 @@ The status bar (bottom of Excel) has quick view buttons:
 
 ---
 
+## Complete Alt Shortcuts Reference
+
+### Workbook Views Group (Alt+W)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Normal View | Alt+W, L |
+| Page Break Preview | Alt+W, I |
+| Page Layout | Alt+W, P |
+| Custom Views | Alt+W, C |
+
+### Show Group (Alt+W)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Ruler | Alt+W, R |
+| Gridlines | Alt+W, V, G |
+| Formula Bar | Alt+W, V, F |
+| Headings | Alt+W, V, H |
+
+### Zoom Group (Alt+W)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Zoom | Alt+W, Q |
+| 100% | Alt+W, J |
+| Zoom to Selection | Alt+W, G |
+
+### Window Group (Alt+W)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| New Window | Alt+W, N | - |
+| Arrange All | Alt+W, A | - |
+| Freeze Panes | Alt+W, F | - |
+| Freeze Top Row | Alt+W, F, R | - |
+| Freeze First Column | Alt+W, F, C | - |
+| Unfreeze Panes | Alt+W, F, F | - |
+| Split | Alt+W, S | - |
+| Hide | Alt+W, H | - |
+| Unhide | Alt+W, U | - |
+| View Side by Side | Alt+W, B | - |
+| Synchronous Scrolling | Alt+W, Y | - |
+| Reset Window Position | Alt+W, T | - |
+| Switch Windows | Alt+W, W | Ctrl+Tab |
+
+### Macros Group (Alt+W)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| View Macros | Alt+W, M, V | Alt+F8 |
+
+---
+
 ## View Keyboard Shortcuts Summary
 
-| Action | Shortcut |
-|--------|----------|
-| Switch between open workbooks | Ctrl+Tab |
-| Switch to previous workbook | Ctrl+Shift+Tab |
-| Switch to next sheet | Ctrl+Page Down |
-| Switch to previous sheet | Ctrl+Page Up |
-| Macros dialog | Alt+F8 |
-| VBA Editor | Alt+F11 |
-| Full screen (toggle) | Ctrl+Shift+F1 |
-| Show/hide ribbon | Ctrl+F1 |
-| Zoom in | Ctrl+Scroll Up |
-| Zoom out | Ctrl+Scroll Down |
-| Normal view | Ctrl+Shift+N |
-| Go to cell | Ctrl+G or F5 |
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Normal View | Alt+W, L | - |
+| Page Break Preview | Alt+W, I | - |
+| Page Layout | Alt+W, P | - |
+| Freeze Panes | Alt+W, F | - |
+| Split Window | Alt+W, S | - |
+| New Window | Alt+W, N | - |
+| Switch Windows | Alt+W, W | Ctrl+Tab |
+| Zoom | Alt+W, Q | - |
+| Macros | Alt+W, M, V | Alt+F8 |
+| VBA Editor | - | Alt+F11 |
+| Full screen (toggle) | - | Ctrl+Shift+F1 |
+| Show/hide ribbon | - | Ctrl+F1 |
+| Switch to next sheet | - | Ctrl+Page Down |
+| Switch to previous sheet | - | Ctrl+Page Up |
 
 ---
 

@@ -2,6 +2,8 @@
 
 > **VBA, macros, add-ins, form controls, and XML tools**
 
+**Ribbon Access:** Press **Alt+L** to activate Developer tab
+
 ---
 
 ## Enabling the Developer Tab
@@ -361,19 +363,64 @@ The Developer tab provides programming and advanced features:
 
 ---
 
+## Complete Alt Shortcuts Reference
+
+### Code Group (Alt+L)
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Visual Basic | Alt+L, V | Alt+F11 |
+| Macros | Alt+L, P, M | Alt+F8 |
+| Record Macro | Alt+L, R | - |
+| Use Relative References | Alt+L, U | - |
+| Macro Security | Alt+L, S | - |
+
+### Add-ins Group (Alt+L)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Add-ins | Alt+L, A, D |
+| Excel Add-ins | Alt+L, A, E |
+| COM Add-ins | Alt+L, A, C |
+
+### Controls Group (Alt+L)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Insert | Alt+L, I |
+| Form Controls | Alt+L, I (then select) |
+| ActiveX Controls | Alt+L, I (then select) |
+| Design Mode | Alt+L, D, M |
+| Properties | Alt+L, O |
+| View Code | Alt+L, C |
+
+### XML Group (Alt+L)
+| Action | Alt Shortcut |
+|--------|--------------|
+| Source | Alt+L, X |
+| Map Properties | Alt+L, M |
+| Expansion Packs | Alt+L, E |
+| Refresh Data | Alt+L, F |
+| Import | Alt+L, B |
+| Export | Alt+L, T |
+
+---
+
 ## Keyboard Shortcuts Summary
 
-| Action | Shortcut |
-|--------|----------|
-| Open VBA Editor | Alt+F11 |
-| Macros dialog | Alt+F8 |
-| Run macro | F5 (in VBA Editor) |
-| Step through code | F8 |
-| Toggle breakpoint | F9 |
-| Stop code | Ctrl+Break |
-| Object Browser | F2 (in VBA Editor) |
-| Immediate Window | Ctrl+G (in VBA Editor) |
-| Close VBA Editor | Alt+Q |
+| Action | Alt Shortcut | Other |
+|--------|--------------|-------|
+| Open VBA Editor | Alt+L, V | Alt+F11 |
+| Macros dialog | Alt+L, P, M | Alt+F8 |
+| Record Macro | Alt+L, R | - |
+| Design Mode | Alt+L, D, M | - |
+| Insert Control | Alt+L, I | - |
+| Properties | Alt+L, O | - |
+| View Code | Alt+L, C | - |
+| Run macro (in VBA Editor) | - | F5 |
+| Step through code | - | F8 |
+| Toggle breakpoint | - | F9 |
+| Stop code | - | Ctrl+Break |
+| Object Browser | - | F2 |
+| Immediate Window | - | Ctrl+G |
+| Close VBA Editor | - | Alt+Q |
 
 ---
 

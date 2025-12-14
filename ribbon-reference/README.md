@@ -6,18 +6,20 @@
 
 ## Quick Navigation by Tab
 
-| Tab | What It Contains |
-|-----|------------------|
-| [📁 File](#file-tab-backstage-view) | Open, Save, Print, Options, Account |
-| [🏠 Home](./home-tab.md) | Clipboard, Font, Alignment, Number, Styles, Cells, Editing |
-| [📥 Insert](./insert-tab.md) | Tables, Charts, Illustrations, Add-ins, Links, Text, Symbols |
-| [📐 Page Layout](./page-layout-tab.md) | Themes, Page Setup, Scale, Sheet Options, Arrange |
-| [🔢 Formulas](./formulas-tab.md) | Function Library, Defined Names, Formula Auditing, Calculation |
-| [📊 Data](./data-tab.md) | Get Data, Queries, Sort & Filter, Data Tools, Outline, Analysis |
-| [✅ Review](./review-tab.md) | Proofing, Accessibility, Insights, Language, Comments, Protect |
-| [👁️ View](./view-tab.md) | Workbook Views, Show, Zoom, Window, Macros |
-| [🔧 Developer](./developer-tab.md) | Code, Add-ins, Controls, XML |
-| [❓ Help](./help-tab.md) | Help, Contact Support, Feedback, Community |
+| Tab | Alt Key | What It Contains |
+|-----|:-------:|------------------|
+| [📁 File](#file-tab-backstage-view) | **Alt+F** | Open, Save, Print, Options, Account |
+| [🏠 Home](./home-tab.md) | **Alt+H** | Clipboard, Font, Alignment, Number, Styles, Cells, Editing |
+| [📥 Insert](./insert-tab.md) | **Alt+N** | Tables, Charts, Illustrations, Add-ins, Links, Text, Symbols |
+| [📐 Page Layout](./page-layout-tab.md) | **Alt+P** | Themes, Page Setup, Scale, Sheet Options, Arrange |
+| [🔢 Formulas](./formulas-tab.md) | **Alt+M** | Function Library, Defined Names, Formula Auditing, Calculation |
+| [📊 Data](./data-tab.md) | **Alt+A** | Get Data, Queries, Sort & Filter, Data Tools, Outline, Analysis |
+| [✅ Review](./review-tab.md) | **Alt+R** | Proofing, Accessibility, Insights, Language, Comments, Protect |
+| [👁️ View](./view-tab.md) | **Alt+W** | Workbook Views, Show, Zoom, Window, Macros |
+| [🔧 Developer](./developer-tab.md) | **Alt+L** | Code, Add-ins, Controls, XML |
+| [❓ Help](./help-tab.md) | **Alt+Y** | Help, Contact Support, Feedback, Community |
+
+> **Pro Tip:** Press **Alt** by itself to see all keyboard shortcuts overlaid on the ribbon. Then press the letter shown to access that tab or command.
 
 ---
 
