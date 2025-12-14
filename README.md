@@ -198,6 +198,9 @@ Control data entry and prevent errors
 ### [⚡ Power Query](./10-Power-Query/)
 Transform and combine data from multiple sources
 
+### [🎗️ Ribbon Reference](./ribbon-reference/)
+Every tab, every button, every option - fully documented
+
 ---
 
 ## 🛠️ Reference & Help
