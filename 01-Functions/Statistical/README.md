@@ -692,12 +692,14 @@ RANK.AVG: 1, 2.5, 2.5, 4 (averages 2 and 3)
 ### Identify Outliers
 ```excel
 // Values beyond 1.5 * IQR from quartiles
-Q1: =QUARTILE.INC(Data, 1)
-Q3: =QUARTILE.INC(Data, 3)
-IQR: =Q3-Q1
-Lower: =Q1-1.5*IQR
-Upper: =Q3+1.5*IQR
-Outlier: =OR(Value<Lower, Value>Upper)
+// Assuming data in A1:A100, testing value in B1
+
+Q1 (in C1): =QUARTILE.INC($A$1:$A$100, 1)
+Q3 (in D1): =QUARTILE.INC($A$1:$A$100, 3)
+IQR (in E1): =D1-C1
+Lower (in F1): =C1-1.5*E1
+Upper (in G1): =D1+1.5*E1
+Outlier Check (in H1): =OR(B1<F1, B1>G1)
 ```
 
 ### Quality Control (Six Sigma)
