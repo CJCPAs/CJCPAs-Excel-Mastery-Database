@@ -827,6 +827,109 @@ End Sub
 
 ---
 
+## Output Examples
+
+### Generated `AR_Audit` Worksheet
+
+**TEST 1: GL TO SUB-LEDGER RECONCILIATION**
+```
+┌─────────────────────────────────────────────────────────────────────────────────────┐
+│ ACCOUNTS RECEIVABLE - AUDIT WORKPAPER                                               │
+│ Period: 12/31/2024                                                                  │
+│ Materiality: $50,000    Performance Materiality: $37,500                            │
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ TEST 1: GL TO SUB-LEDGER RECONCILIATION                                             │
+├────────────────────────────────┬────────────────┬────────────────┬──────────────────┤
+│ Description                    │ Amount         │ Reference      │ Status           │
+├────────────────────────────────┼────────────────┼────────────────┼──────────────────┤
+│ GL Balance - Account 1200      │ $1,245,680     │ TB             │                  │
+│ AR Aging Sub-Ledger Total      │ $1,245,680     │ Aging Report   │                  │
+│ Difference                     │ $0.00          │                │ ✓ RECONCILED     │
+└────────────────────────────────┴────────────────┴────────────────┴──────────────────┘
+```
+
+**TEST 2: AR AGING ANALYSIS**
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 2: AGING ANALYSIS & ALLOWANCE ADEQUACY                                                          │
+├──────────────┬────────────────┬────────────┬────────────────┬────────────────┬───────────────────────┤
+│ Aging Bucket │ Balance        │ % of Total │ Historical %   │ Est. Uncoll    │ Status                │
+├──────────────┼────────────────┼────────────┼────────────────┼────────────────┼───────────────────────┤
+│ Current      │ $856,420       │ 68.8%      │ 0.5%           │ $4,282         │ ✓ Normal              │
+│ 1-30 Days    │ $215,340       │ 17.3%      │ 1.0%           │ $2,153         │ ✓ Normal              │
+│ 31-60 Days   │ $98,500        │ 7.9%       │ 3.0%           │ $2,955         │ ✓ Normal              │
+│ 61-90 Days   │ $45,620        │ 3.7%       │ 10.0%          │ $4,562         │ ⚠ Monitor             │
+│ Over 90 Days │ $29,800        │ 2.4%       │ 35.0%          │ $10,430        │ ✗ HIGH RISK           │
+├──────────────┼────────────────┼────────────┼────────────────┼────────────────┼───────────────────────┤
+│ TOTAL        │ $1,245,680     │ 100.0%     │                │ $24,382        │                       │
+├──────────────┴────────────────┴────────────┴────────────────┴────────────────┴───────────────────────┤
+│ Allowance per Books:    $25,000                                                                      │
+│ Calculated Allowance:   $24,382                                                                      │
+│ Difference:             $618        ✓ ALLOWANCE ADEQUATE                                             │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**TEST 3: SUBSEQUENT RECEIPTS**
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 3: SUBSEQUENT RECEIPTS TESTING                                                                  │
+├─────────────┬─────────────────────────┬────────────────┬────────────┬────────────┬───────────────────┤
+│ Customer    │ Name                    │ 12/31 Balance  │ Collected  │ Outstanding│ Status            │
+├─────────────┼─────────────────────────┼────────────────┼────────────┼────────────┼───────────────────┤
+│ CUST-001    │ ABC Corporation         │ $125,000       │ $125,000   │ $0         │ ✓ COLLECTED       │
+│ CUST-002    │ XYZ Industries          │ $98,500        │ $75,000    │ $23,500    │ ⚠ PARTIAL         │
+│ CUST-003    │ Smith Manufacturing     │ $67,800        │ $67,800    │ $0         │ ✓ COLLECTED       │
+│ CUST-004    │ Johnson Supply Co       │ $45,200        │ $0         │ $45,200    │ ✗ NOT COLLECTED   │
+│ CUST-005    │ Premier Services        │ $38,750        │ $38,750    │ $0         │ ✓ COLLECTED       │
+├─────────────┴─────────────────────────┼────────────────┼────────────┼────────────┼───────────────────┤
+│ TOTAL TESTED                          │ $375,250       │ $306,550   │ $68,700    │ 81.7% Collected   │
+└───────────────────────────────────────┴────────────────┴────────────┴────────────┴───────────────────┘
+```
+
+**TEST 4: CONFIRMATION TRACKING**
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ AR CONFIRMATION CONTROL                                                                              │
+├─────────────┬──────────────────────┬────────────┬───────────┬────────────┬───────────┬──────────────┤
+│ Customer ID │ Customer Name        │ Balance    │ Sent Date │ Resp Date  │ Confirmed │ Status       │
+├─────────────┼──────────────────────┼────────────┼───────────┼────────────┼───────────┼──────────────┤
+│ CUST-001    │ ABC Corporation      │ $125,000   │ 01/05/25  │ 01/12/25   │ $125,000  │ ✓ Agrees     │
+│ CUST-002    │ XYZ Industries       │ $98,500    │ 01/05/25  │ 01/18/25   │ $95,200   │ ✗ Exception  │
+│ CUST-003    │ Smith Manufacturing  │ $67,800    │ 01/05/25  │            │           │ ⚠ No Reply   │
+│ CUST-004    │ Johnson Supply       │ $45,200    │ 01/05/25  │ 01/15/25   │ $45,200   │ ✓ Agrees     │
+├─────────────┴──────────────────────┴────────────┴───────────┴────────────┴───────────┴──────────────┤
+│ Confirmation Summary:  Sent: 4  |  Agrees: 2  |  Exceptions: 1  |  No Reply: 1                      │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**AUDIT SUMMARY**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ AUDIT SUMMARY                                                   │
+├─────────────────────────────────────────────────────────────────┤
+│ Gross Accounts Receivable:               $1,245,680             │
+│ Less: Allowance for Doubtful Accounts:   ($25,000)              │
+│ Net Accounts Receivable:                 $1,220,680             │
+│                                                                 │
+│ Procedures Performed:                                           │
+│   ✓ GL to sub-ledger reconciliation                             │
+│   ✓ Aging analysis and allowance adequacy                       │
+│   ✓ Subsequent receipts testing                                 │
+│   ✓ Confirmation procedures                                     │
+│   ☐ Credit memo analysis (manual)                               │
+│   ☐ Sales cutoff testing (manual)                               │
+│                                                                 │
+│ Exceptions Noted:                                               │
+│   • CUST-002: Confirmation exception $3,300 - timing diff       │
+│   • CUST-004: Not collected - investigate collectibility        │
+│                                                                 │
+│ CONCLUSION:                                                     │
+│ [Document conclusion]                                           │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## Assertions Tested
 
 | Assertion | Test | Pass Criteria |

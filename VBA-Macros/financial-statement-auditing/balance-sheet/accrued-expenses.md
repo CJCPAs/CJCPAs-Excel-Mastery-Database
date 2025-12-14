@@ -358,4 +358,86 @@ End Sub
 
 ---
 
+## Output Examples
+
+### Generated `Accruals_Audit` Worksheet
+
+**TEST 1: GL TO SCHEDULE RECONCILIATION**
+```
+┌─────────────────────────────────────────────────────────────────────────────────────┐
+│ ACCRUED EXPENSES - AUDIT WORKPAPER                                                  │
+│ Period: 12/31/2024                                                                  │
+│ Materiality: $50,000                                                                │
+├─────────────────────────────────────────────────────────────────────────────────────┤
+│ TEST 1: GL TO SCHEDULE RECONCILIATION                                               │
+├────────────────────────────────┬────────────────┬────────────────┬──────────────────┤
+│ Description                    │ Amount         │ Reference      │ Status           │
+├────────────────────────────────┼────────────────┼────────────────┼──────────────────┤
+│ GL Balance - Account 2200      │ $425,680       │ TB             │                  │
+│ Accruals Detail Schedule       │ $425,680       │ Client PBC     │                  │
+│ Difference                     │ $0.00          │                │ ✓ RECONCILED     │
+└────────────────────────────────┴────────────────┴────────────────┴──────────────────┘
+```
+
+**TEST 2: SUBSEQUENT PAYMENT TESTING**
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 2: SUBSEQUENT PAYMENT TESTING                                                                   │
+│ Testing payments from 01/01/2025 to 01/31/2025 for 12/31/2024 accruals                              │
+├─────────────────────────┬──────────────┬────────────┬────────────┬────────────┬─────────────────────┤
+│ Accrual Description     │ 12/31 Accrual│ Paid Date  │ Paid Amount│ Difference │ Status              │
+├─────────────────────────┼──────────────┼────────────┼────────────┼────────────┼─────────────────────┤
+│ Accrued Wages           │ $125,000     │ 01/05/2025 │ $125,000   │ $0         │ ✓ VERIFIED          │
+│ Accrued Utilities       │ $18,500      │ 01/15/2025 │ $18,750    │ $250       │ ⚠ MINOR VARIANCE    │
+│ Accrued Property Tax    │ $45,000      │ 01/20/2025 │ $45,000    │ $0         │ ✓ VERIFIED          │
+│ Accrued Professional    │ $67,500      │ 01/22/2025 │ $72,000    │ $4,500     │ ⚠ UNDERACCRUED      │
+│ Accrued Insurance       │ $22,000      │ 01/18/2025 │ $22,000    │ $0         │ ✓ VERIFIED          │
+│ Accrued Interest        │ $35,680      │ 01/15/2025 │ $35,680    │ $0         │ ✓ VERIFIED          │
+├─────────────────────────┴──────────────┴────────────┴────────────┴────────────┴─────────────────────┤
+│ Verified: 4  |  Minor Variance: 1  |  Underaccrued: 1  |  Net Difference: $4,750                    │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**TEST 3: YEAR-OVER-YEAR COMPARISON**
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ TEST 3: YEAR-OVER-YEAR ANALYTICAL REVIEW                                                             │
+├─────────────────────────┬──────────────┬──────────────┬────────────┬────────────┬───────────────────┤
+│ Accrual Type            │ PY Balance   │ CY Balance   │ $ Change   │ % Change   │ Explanation Req'd │
+├─────────────────────────┼──────────────┼──────────────┼────────────┼────────────┼───────────────────┤
+│ Accrued Wages           │ $118,000     │ $125,000     │ $7,000     │ 5.9%       │ ✓ Reasonable      │
+│ Accrued Utilities       │ $17,200      │ $18,500      │ $1,300     │ 7.6%       │ ✓ Reasonable      │
+│ Accrued Property Tax    │ $42,000      │ $45,000      │ $3,000     │ 7.1%       │ ✓ Reasonable      │
+│ Accrued Professional    │ $35,000      │ $67,500      │ $32,500    │ 92.9%      │ ✗ INVESTIGATE     │
+│ Accrued Insurance       │ $20,500      │ $22,000      │ $1,500     │ 7.3%       │ ✓ Reasonable      │
+│ Accrued Bonuses         │ $85,000      │ $112,000     │ $27,000    │ 31.8%      │ ⚠ Inquire         │
+├─────────────────────────┼──────────────┼──────────────┼────────────┼────────────┼───────────────────┤
+│ TOTAL                   │ $317,700     │ $390,000     │ $72,300    │ 22.8%      │                   │
+└─────────────────────────┴──────────────┴──────────────┴────────────┴────────────┴───────────────────┘
+```
+
+**AUDIT SUMMARY**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ AUDIT SUMMARY                                                   │
+├─────────────────────────────────────────────────────────────────┤
+│ Total Accrued Expenses:                  $425,680               │
+│                                                                 │
+│ Procedures Performed:                                           │
+│   ✓ GL to schedule reconciliation                               │
+│   ✓ Subsequent payment testing                                  │
+│   ✓ Year-over-year analytical review                            │
+│   ☐ Accrual recalculation (manual)                              │
+│   ☐ Search for unrecorded accruals (manual)                     │
+│                                                                 │
+│ Proposed Adjustments:                                           │
+│   • Increase professional fee accrual: $4,500                   │
+│                                                                 │
+│ CONCLUSION:                                                     │
+│ [Document conclusion]                                           │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
 [⬅️ Back to FS Auditing](../README.md) | [⬅️ AP](./accounts-payable.md) | [➡️ Debt](./debt.md)
