@@ -69,20 +69,50 @@
 
 ## VBA Macros for Public Accounting
 
-> **There's a VBA for That!** Ready-to-copy-paste VBA code for accountants, auditors, and finance professionals.
+> **There's a VBA for That!** 100+ ready-to-copy-paste VBA macros for accountants, auditors, and finance professionals. Every module includes complete code AND visual output examples.
+
+### Core VBA Libraries
 
 | Category | What's Inside |
 |----------|---------------|
-| [**Data Import & Cleanup**](./VBA-Macros/data-import-cleanup/) | Import CSV files, remove duplicates, clean data, parse text |
-| [**Journal Entries**](./VBA-Macros/journal-entries/) | Create JE templates, validate debits/credits, post to GL |
-| [**Reconciliations**](./VBA-Macros/reconciliations/) | Bank recons, account matching, variance analysis, tick marks |
-| [**Financial Statements**](./VBA-Macros/financial-statements/) | Generate BS/IS, comparative statements, financial ratios |
-| [**Workpapers**](./VBA-Macros/workpapers/) | Create PBC lists, index workpapers, add tickmarks, sign-offs |
-| [**Reporting**](./VBA-Macros/reporting/) | Export to PDF, email reports, create dashboards |
-| [**Audit Procedures**](./VBA-Macros/audit-procedures/) | Random sampling, MUS, confirmations, cutoff testing |
-| [**Formatting & Utilities**](./VBA-Macros/formatting-utilities/) | Format cells, protect sheets, navigation helpers |
+| [**Data Import & Cleanup**](./VBA-Macros/data-import-cleanup/) | Import CSV/TXT files, remove duplicates, clean data, parse text, standardize formats |
+| [**Journal Entries**](./VBA-Macros/journal-entries/) | Create JE templates, validate debits = credits, auto-number entries, post to GL |
+| [**Reconciliations**](./VBA-Macros/reconciliations/) | Bank recons, intercompany matching, variance analysis, aging schedules, tick marks |
+| [**Financial Statements**](./VBA-Macros/financial-statements/) | Generate BS/IS/CF, comparative statements, financial ratios, trend analysis |
+| [**Workpapers**](./VBA-Macros/workpapers/) | Create PBC lists, index workpapers, add tickmarks, sign-off tracking, cross-references |
+| [**Reporting**](./VBA-Macros/reporting/) | Export to PDF, email automation, dashboard generation, board packages |
+| [**Audit Procedures**](./VBA-Macros/audit-procedures/) | Random sampling, MUS selection, confirmations, cutoff testing, substantive analytics |
+| [**Formatting & Utilities**](./VBA-Macros/formatting-utilities/) | Format cells, protect sheets, navigation helpers, print setup, worksheet management |
 
-**[View All VBA Macros](./VBA-Macros/)** — 100+ ready-to-use macros with copy-paste code
+### Financial Statement Auditing (GAAS/GAAP Compliance)
+
+> **14 Complete Audit Modules** — Each with multiple VBA procedures, audit assertions testing, and visual output examples showing exactly what you'll see in Excel.
+
+#### Balance Sheet Audit Areas
+
+| Area | Tests Included |
+|------|----------------|
+| [**Cash & Bank**](./VBA-Macros/financial-statement-auditing/balance-sheet/cash.md) | Bank reconciliation validation, outstanding checks analysis, cash cutoff testing |
+| [**Accounts Receivable**](./VBA-Macros/financial-statement-auditing/balance-sheet/accounts-receivable.md) | Aging analysis, allowance testing, confirmation selection, collectibility review |
+| [**Inventory**](./VBA-Macros/financial-statement-auditing/balance-sheet/inventory.md) | Cost layer analysis, obsolescence testing, lower of cost or market, count procedures |
+| [**Prepaids & Deferrals**](./VBA-Macros/financial-statement-auditing/balance-sheet/prepaids.md) | Amortization schedules, period allocation, expense recognition testing |
+| [**PP&E / Fixed Assets**](./VBA-Macros/financial-statement-auditing/balance-sheet/fixed-assets.md) | Depreciation recalculation, additions/disposals, impairment analysis, rollforward |
+| [**Accounts Payable**](./VBA-Macros/financial-statement-auditing/balance-sheet/accounts-payable.md) | Vendor statement reconciliation, unrecorded liabilities, cutoff testing |
+| [**Accrued Expenses**](./VBA-Macros/financial-statement-auditing/balance-sheet/accrued-expenses.md) | Accrual completeness, subsequent payments, estimate reasonableness |
+| [**Debt & Notes Payable**](./VBA-Macros/financial-statement-auditing/balance-sheet/debt.md) | Amortization schedules, covenant compliance, interest recalculation |
+| [**Equity**](./VBA-Macros/financial-statement-auditing/balance-sheet/equity.md) | Stock transactions, retained earnings rollforward, dividend testing |
+
+#### Income Statement Audit Areas
+
+| Area | Tests Included |
+|------|----------------|
+| [**Revenue**](./VBA-Macros/financial-statement-auditing/income-statement/revenue.md) | Cutoff testing, monthly trend analysis, large/unusual transactions, credit memo review |
+| [**Cost of Goods Sold**](./VBA-Macros/financial-statement-auditing/income-statement/cogs.md) | Inventory equation, gross margin analysis, purchase cutoff, cost variance |
+| [**Operating Expenses**](./VBA-Macros/financial-statement-auditing/income-statement/operating-expenses.md) | Budget vs actual, year-over-year comparison, monthly trends, unusual item flagging |
+| [**Payroll**](./VBA-Macros/financial-statement-auditing/income-statement/payroll.md) | Payroll register testing, tax reconciliation, benefit accruals, 941 tie-out |
+| [**Income Taxes**](./VBA-Macros/financial-statement-auditing/income-statement/income-tax.md) | Provision calculation, deferred tax analysis, rate reconciliation, payment testing |
+
+**[View All VBA Macros](./VBA-Macros/)** — Complete index with copy-paste code for every module
 
 ---
 
